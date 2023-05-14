@@ -1,0 +1,47 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+<style>
+#genpost{margin:20px;}#post-wrapper{width:100%;float:unset;margin:auto}.post-container{padding-right:0}#sidebar-wrapper,#disqus_thread,h1.post-title{display:none}
+.malgen input {
+  padding: 10px;
+  display: block;
+  max-width: calc(100% - 25px);
+  margin-bottom: 10px;
+  width: 100%;
+}
+.notep {
+  display: block;
+  margin-bottom: 20px;
+}
+.benimegen {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+}
+button.cari, button.kopi {
+  padding: 5px 10px;
+  margin: 10px auto 30px;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  color: rgba(0, 0, 0, 0.39);
+}
+</style>
+
+<span class="notep">Dikarenakan tidak bisa langsung mengambil data dari mangaupdates, silahkan lakukan bypass <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" rel="nofollow" style="color: red;">Cors Origin</a> dan klik "Request temporary access to the demo server".</span>
+<label for="manga-url">Mangapdates URL:</label>
+<div class="malgen">
+<span class="benimegen">
+  <input type="text" id="manga-url">
+</span>
+<button class="cari" id="get-manga-data">Get Manga Data</button>
+<button class="kopi" onclick="mycopi()">Copy GEN</button>
+</div>
+
+<div id="getmanga"></div>
+<script>       
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('F f=["\\s\\b\\g","\\R\\B\\b\\l\\w\\b\\E\\z\\m\\g","\\o","\\d\\u\\g\\c\\j","\\y\\j\\j\\u\\d\\A\\o\\o\\q\\p\\m\\d\\E\\b\\l\\D\\Q\\y\\e\\m\\e\\L\\y\\e\\m\\p\\K\\z\\b\\u\\u\\L\\q\\p\\B\\o\\y\\j\\j\\u\\d\\A\\o\\o\\b\\u\\c\\L\\B\\b\\l\\w\\b\\z\\u\\k\\b\\j\\e\\d\\L\\q\\p\\B\\o\\s\\1f\\o\\d\\e\\m\\c\\e\\d\\o","\\1d\\1r\\H","\\1c\\d\\p\\l","","\\g\\e\\l\\w\\j\\y","\\w\\e\\l\\m\\e\\d","\\w\\e\\l\\m\\e","\\1q\\a","\\q\\b\\j\\e\\w\\p\\m\\c\\e\\d","\\q\\b\\j\\e\\w\\p\\m\\D","\\k\\e\\d\\q\\m\\c\\u\\j\\c\\p\\l","\\i\\v\\h","\\c\\l\\k\\e\\I\\U\\O","\\d\\g\\c\\q\\e","\\e\\B\\u\\j\\D","\\R\\w\\e\\j\\B\\b\\l\\w\\b","\\i\\j\\e\\I\\j\\b\\m\\e\\b\\a\\m\\e\\b\\k\\p\\l\\g\\D\\h\\t\\r\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\d\\e\\u\\b\\m\\b\\j\\p\\m\\n\\a\\d\\j\\D\\g\\e\\x\\n\\q\\g\\e\\b\\m\\A\\a\\v\\p\\j\\y\\1k\\a\\j\\e\\I\\j\\E\\b\\g\\c\\w\\l\\A\\a\\q\\e\\l\\j\\e\\m\\1k\\n\\h\\t\\r\\i\\c\\B\\w\\a\\v\\p\\m\\k\\e\\m\\x\\n\\1b\\n\\a\\k\\b\\j\\b\\E\\p\\m\\c\\w\\c\\l\\b\\g\\E\\y\\e\\c\\w\\y\\j\\x\\n\\1p\\P\\1n\\n\\a\\k\\b\\j\\b\\E\\p\\m\\c\\w\\c\\l\\b\\g\\E\\Q\\c\\k\\j\\y\\x\\n\\1f\\P\\1m\\1b\\n\\a\\d\\m\\q\\x\\n","\\p\\m\\c\\w\\c\\l\\b\\g","\\z\\m\\g","\\c\\B\\b\\w\\e","\\n\\a\\o\\h\\i\\o\\k\\c\\s\\h\\t\\r\\i\\v\\m\\a\\o\\h\\t\\r\\t\\r\\i\\u\\h\\t\\r\\t\\r\\i\\o\\u\\h\\t\\r\\t\\r\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\v\\e\\l\\c\\B\\e\\n\\h\\t\\r\\i\\y\\P\\h\\1y\\l\\O\\p\\a\\H\\D\\u\\e\\A\\i\\o\\y\\P\\h\\t\\r\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\c\\l\\O\\E\\Q\\m\\b\\u\\n\\h\\t\\r\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\c\\l\\O\\E\\c\\l\\q\\n\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\H\\c\\j\\g\\e\\i\\o\\v\\h\\A\\a","\\j\\c\\j\\g\\e","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\V\\g\\j\\e\\m\\l\\b\\j\\c\\s\\e\\i\\o\\v\\h\\A\\a","\\b\\d\\d\\p\\q\\c\\b\\j\\e\\k","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\H\\D\\u\\e\\i\\o\\v\\h\\A\\a","\\j\\D\\u\\e","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\J\\j\\b\\j\\z\\d\\i\\o\\v\\h\\A\\a","\\d\\j\\b\\j\\z\\d","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\H\\b\\y\\z\\l\\i\\o\\v\\h\\A\\a","\\D\\e\\b\\m","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\U\\m\\c\\w\\c\\l\\b\\g\\a\\1h\\z\\v\\g\\c\\d\\y\\e\\m\\i\\o\\v\\h\\A\\a","\\u\\z\\v\\g\\c\\q\\b\\j\\c\\p\\l\\1x\\l\\b\\B\\e","\\u\\z\\v\\g\\c\\q\\b\\j\\c\\p\\l\\d","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\1d\\e\\l\\m\\e\\d\\i\\o\\v\\h\\A\\a","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\1j\\b\\j\\e\\w\\p\\m\\D\\i\\o\\v\\h\\A\\a","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\V\\z\\j\\y\\p\\m\\i\\o\\v\\h\\A\\a","\\l\\b\\B\\e","\\b\\z\\j\\y\\p\\m\\d","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\a\\a\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\g\\p\\g\\n\\h\\i\\v\\h\\V\\m\\j\\c\\d\\j\\i\\o\\v\\h\\A\\a","\\i\\o\\k\\c\\s\\h\\t\\r\\a\\a\\i\\o\\k\\c\\s\\h\\t\\r\\a\\i\\o\\k\\c\\s\\h\\t\\r\\i\\k\\c\\s\\a\\q\\g\\b\\d\\d\\x\\n\\d\\D\\l\\p\\u\\d\\c\\d\\n\\h\\t\\r\\a\\a\\a\\i\\v\\h\\J\\c\\l\\p\\u\\d\\c\\d\\A\\i\\o\\v\\h\\t\\r\\a\\a\\a\\i\\d\\u\\b\\l\\a\\q\\g\\b\\d\\d\\x\\n\\d\\c\\l\\p\\u\\d\\c\\d\\d\\n\\h\\t\\r\\a\\a\\a\\a\\i\\u\\h\\t\\r\\a\\a\\a\\a","\\t\\r\\a\\a\\a\\a\\i\\o\\u\\h\\t\\r\\a\\a\\a\\i\\o\\d\\u\\b\\l\\h\\t\\r\\a\\i\\o\\k\\c\\s\\h\\t\\r\\i\\o\\j\\e\\I\\j\\b\\m\\e\\b\\h","\\b\\u\\u\\e\\l\\k","\\b\\1c\\b\\I","\\q\\g\\c\\q\\K","\\R\\w\\e\\j\\E\\B\\b\\l\\w\\b\\E\\k\\b\\j\\b","\\m\\e\\b\\k\\D","\\R\\w\\e\\j\\B\\b\\l\\w\\b\\a\\j\\e\\I\\j\\b\\m\\e\\b","\\1z\\z\\e\\m\\D\\J\\e\\g\\e\\q\\j\\p\\m","\\d\\e\\g\\e\\q\\j","\\d\\e\\j\\J\\e\\g\\e\\q\\j\\c\\p\\l\\1w\\b\\l\\w\\e","\\s\\b\\g\\z\\e","\\Q\\m\\c\\j\\e\\H\\e\\I\\j","\\q\\g\\c\\u\\v\\p\\b\\m\\k","\\J\\z\\k\\b\\y\\a\\j\\e\\m\\E\\1j\\U\\1h\\1s\\r\\r\\J\\c\\g\\b\\y\\K\\b\\l\\a\\g\\b\\l\\w\\d\\z\\l\\w\\a\\j\\e\\B\\u\\e\\g\\a\\k\\c\\a\\y\\b\\g\\b\\B\\b\\l\\a\\u\\p\\d\\j\\c\\l\\w\\a\\B\\p\\k\\e\\a\\1v\\H\\1A\\1u\\L\\r\\1t\\b\\g\\b\\z\\a\\b\\k\\b\\a\\D\\w\\a\\K\\z\\m\\b\\l\\w\\a\\u\\b\\d\\a\\d\\c\\g\\b\\y\\K\\b\\l\\a\\e\\k\\c\\j\\a\\d\\e\\l\\k\\c\\m\\c\\a\\A\\s"];$(1e)[f[1o]](M(){$(f[1B])[f[2h]](M(){F X=$(f[1])[f[0]]();F 1l=2f(X[f[3]](f[2])[4],Z);$[f[2b]]({2c:f[4]+1l,2d:f[5],2a:f[6],2e:M(C){F W=f[7];Y(F G=0;G<C[f[9]][f[8]];G++){W+=C[f[9]][G][f[10]]+f[11]};F T=f[7];Y(F G=0;G<C[f[12]][f[8]];G++){T+=C[f[12]][G][f[13]]+f[11]};F S=C[f[14]];F 1g=S[f[17]](0,S[f[16]](f[15]));$(f[19])[f[18]]();$(f[19])[f[1K]](`${f[20]}${C[f[23]][f[22]][f[21]]}${f[24]}${C[f[25]]}${f[26]}${C[f[27]][0][f[25]]}${f[28]}${C[f[29]]}${f[1I]}${C[f[1N]]}${f[1M]}${C[f[1L]]}${f[1E]}${C[f[Z]][0][f[1D]]}${f[1C]}${W}${f[1H]}${T}${f[1G]}${C[f[1a]][0][f[1i]]}${f[1F]}${C[f[1a]][1][f[1i]]}${f[1W]}${1g}${f[1V]}`)}})})});M 1U(){F N=1e[f[1Z]](f[1Y]);N[f[1X]]();N[f[1Q]](0,1P);1O[f[1T]][f[1S]](N[f[1R]]);1J(f[2g])}',62,142,'||||||||||x20|x61|x69|x73|x65|_0xe6c4|x6C|x3E|x3C|x74|x64|x6E|x72|x22|x2F|x6F|x63|x0A|x76|x0D|x70|x62|x67|x3D|x68|x75|x3A|x6D|_0xbd02x3|x79|x2D|var|_0xbd02x5|x54|x78|x53|x6B|x2E|function|_0xbd02xa|x66|x32|x77|x23|_0xbd02x7|_0xbd02x6|x4F|x41|_0xbd02x4|_0xbd02x1|for|36|||||||||||41|x30|x6A|x47|document|x31|_0xbd02x8|x50|40|x43|x3B|_0xbd02x2|x38|x34|49|x36|x2C|x45|x59|x4B|x4C|x48|x52|x5F|x49|x71|x4D|48|37|35|34|42|39|38|30|alert|45|33|32|31|navigator|99999|53|54|55|56|mycopi|44|43|52|50|51|||||||||||dataType|46|url|type|success|parseInt|57|47'.split('|'),0,{}))
+
+</script>
